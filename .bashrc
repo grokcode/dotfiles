@@ -1,6 +1,4 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
-# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
-# for examples
 
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
@@ -13,8 +11,6 @@ HISTCONTROL=ignoreboth
 
 # append to the history file, don't overwrite it
 shopt -s histappend
-
-# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -45,18 +41,11 @@ export PATH=\
 $PATH:\
 .
 
-#export PYTHONPATH=/home/smudge/work/django-practice:\
-#$PYTHONPATH
-
-#export DJANGO_SETTINGS_MODULE=codeshare.settings
-
 export CVSROOT=anonymous@amtu.cvs.sourceforge.net:/cvsroot/amtu
 export CVS_RSH=ssh
 export EDITOR=emacs
 export CVSEDITOR=emacs
-#export JAVA_HOME=/usr/lib/jvm/java-6-sun/
 export JAVA_HOME=/usr/lib/jvm/java-6-openjdk/
-#export PLUGIN_HOME=/usr/lib/jvm/java-6-sun/jre/plugin/
 
 export JPDA_ADDRESS=8000
 export JPDA_TRANSPORT=dt_socket
