@@ -1,4 +1,6 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
+# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
+# for examples
 
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
@@ -11,6 +13,8 @@ HISTCONTROL=ignoreboth
 
 # append to the history file, don't overwrite it
 shopt -s histappend
+
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -36,16 +40,24 @@ xterm*|rxvt*)
 esac
 
 export PATH=\
+/opt/vagrant/bin:\
 /home/smudge/bin/WorldOfGoo:\
 /home/smudge/bin/cruisecontrol-2.8.3/main/bin:\
 $PATH:\
 .
 
+#export PYTHONPATH=/home/smudge/work/django-practice:\
+#$PYTHONPATH
+
+#export DJANGO_SETTINGS_MODULE=codeshare.settings
+
 export CVSROOT=anonymous@amtu.cvs.sourceforge.net:/cvsroot/amtu
 export CVS_RSH=ssh
 export EDITOR=emacs
 export CVSEDITOR=emacs
+#export JAVA_HOME=/usr/lib/jvm/java-6-sun/
 export JAVA_HOME=/usr/lib/jvm/java-6-openjdk/
+#export PLUGIN_HOME=/usr/lib/jvm/java-6-sun/jre/plugin/
 
 export JPDA_ADDRESS=8000
 export JPDA_TRANSPORT=dt_socket
@@ -64,3 +76,10 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+# Virtualenv wrapper
+export VIRTUALENVWRAPPER_PYTHON=`which python`
+export WORKON_HOME=$HOME/.virtualenv
+export PROJECT_HOME=$HOME/work 
+source /usr/local/bin/virtualenvwrapper.sh
