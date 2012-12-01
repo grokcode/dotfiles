@@ -1,6 +1,8 @@
+#!/usr/bin/zsh
 # File: ~/.zshrc
 # Author: jess johnson <jess@grokcode.com>
 
+export SHELL='zsh'
 
 # Prompt.
 PS1='
@@ -49,4 +51,4 @@ unsetopt caseglob
 export VIRTUALENVWRAPPER_PYTHON=`which python`
 export WORKON_HOME=$HOME/.virtualenv
 export PROJECT_HOME=$HOME/work 
-#source /usr/local/bin/virtualenvwrapper.sh
+source /usr/local/bin/virtualenvwrapper.sh
