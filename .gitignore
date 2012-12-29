@@ -1,5 +1,5 @@
 # Global git ignore file
-# Enable with gitconfig --global core.excludesfile ~/.gitignore
+# Enable with git config --global core.excludesfile ~/.gitignore
 
 # Emacs autosaves
 *~
