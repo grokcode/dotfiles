@@ -42,14 +42,11 @@ esac
 export PATH=\
 /opt/vagrant/bin:\
 /home/smudge/bin/WorldOfGoo:\
-/home/smudge/bin/cruisecontrol-2.8.3/main/bin:\
 $PATH:\
 .
 
 #export PYTHONPATH=/home/smudge/work/django-practice:\
 #$PYTHONPATH
-
-#export DJANGO_SETTINGS_MODULE=codeshare.settings
 
 export CVSROOT=anonymous@amtu.cvs.sourceforge.net:/cvsroot/amtu
 export CVS_RSH=ssh
@@ -62,11 +59,12 @@ export JAVA_HOME=/usr/lib/jvm/java-6-openjdk/
 export JPDA_ADDRESS=8000
 export JPDA_TRANSPORT=dt_socket
 
+# Aliases.
 alias mkdir='mkdir -p'
-alias emacs='emacs -bg ghostwhite -fg black -cr lightsteelblue  2> /dev/null'
 alias dos2unix=fromdos 
 alias unix2dos=todos
-
+alias gs='git status $1'
+alias emacs='emacs 2> /dev/null'
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -74,6 +72,10 @@ alias unix2dos=todos
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+     . `brew --prefix`/etc/bash_completion
+fi
+
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
@@ -81,5 +83,9 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 # Virtualenv wrapper
 export VIRTUALENVWRAPPER_PYTHON=`which python`
 export WORKON_HOME=$HOME/.virtualenv
-export PROJECT_HOME=$HOME/work 
-source /usr/local/bin/virtualenvwrapper.sh
+export PROJECT_HOME=$HOME/work
+if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
+    source /usr/local/bin/virtualenvwrapper.sh
+fi 
+
+
