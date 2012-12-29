@@ -1,0 +1,20 @@
+# Global git ignore file
+# Enable with gitconfig --global core.excludesfile ~/.gitignore
+
+# Emacs autosaves
+*~
+
+# Compiled files
+*.pyc
+*.class
+*.o
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
