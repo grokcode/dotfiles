@@ -18,7 +18,7 @@
  '(font-lock-comment-face ((t (:foreground "firebrick"))))
  '(font-lock-constant-face ((t (:foreground "cadetblue"))))
  '(font-lock-function-name-face ((t (:foreground "blue1"))))
- '(font-lock-keyword-face ((t (:foreground "purple1"))))
+ '(font-lock-keyword-face ((t (:foreground "#a020f0"))))
  '(font-lock-string-face ((t (:foreground "rosybrown"))))
  '(font-lock-type-face ((t (:foreground "forestgreen"))))
  '(font-lock-variable-name-face ((t (:foreground "darkgoldenrod"))))
@@ -49,7 +49,7 @@
  '(paren-face-mismatch ((t (:inherit show-paren-mismatch-face))))
  '(persp-selected-face ((t (:foreground "#729fcf"))))
  '(show-paren-match-face ((t (:background "turquoise"))))
- '(show-paren-mismatch-face ((t (:background "purple1" :foreground "white"))))
+ '(show-paren-mismatch-face ((t (:background "#a020f0" :foreground "white"))))
 
  '(next-error ((t (:inherit (region)))))
  '(query-replace ((t (:inherit (isearch))))))
