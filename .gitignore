@@ -3,6 +3,8 @@
 
 # Emacs autosaves
 *~
+.#*
+#*#
 
 # Compiled files
 *.pyc
