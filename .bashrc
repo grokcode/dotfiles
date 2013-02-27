@@ -40,8 +40,7 @@ xterm*|rxvt*)
 esac
 
 export PATH=\
-/opt/vagrant/bin:\
-/home/smudge/bin/WorldOfGoo:\
+/usr/local/sbin:\
 $PATH:\
 .
 
