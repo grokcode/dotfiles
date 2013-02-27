@@ -18,6 +18,13 @@
 	(font . "Inconsolata-16")
 	))
 
+;; Add Marmalade user packages
+(require 'package)
+(add-to-list 'package-archives ; original Emacs Lisp Package Archive
+             '("elpa" . "http://tromey.com/elpa/"))
+(add-to-list 'package-archives ; user-contributed repository
+             '("marmalade" . "http://marmalade-repo.org/packages/"))
+
 ;; dont open the backtrace buffer on error
 ;(setq debug-on-error nil)
 
