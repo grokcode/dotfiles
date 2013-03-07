@@ -1,0 +1,10 @@
+[user]
+	email = jess@grokcode.com
+[core]
+	editor = emacs
+	excludesfile = ~/.gitignore
+[content]
+	editor = emacs
+[alias]
+	co = checkout
+	unstage = reset HEAD --
