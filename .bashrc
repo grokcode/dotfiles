@@ -41,6 +41,7 @@ esac
 
 export PATH=\
 /usr/local/sbin:\
+~/bin:\
 $PATH:\
 .
 
@@ -78,6 +79,8 @@ fi
 # Rbenv shims and autocompletion
 export RBENV_ROOT=/usr/local/var/rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # Virtualenv wrapper
 export VIRTUALENVWRAPPER_PYTHON=`which python`
