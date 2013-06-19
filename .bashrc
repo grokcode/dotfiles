@@ -64,6 +64,7 @@ alias mkdir='mkdir -p'
 alias dos2unix=fromdos 
 alias unix2dos=todos
 alias gs='git status $1'
+alias grep='grep --color=always $1'
 alias emacs='emacs 2> /dev/null'
 
 # enable programmable completion features (you don't need to enable
