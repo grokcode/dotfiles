@@ -53,7 +53,7 @@ export CVS_RSH=ssh
 export EDITOR=emacs
 export CVSEDITOR=emacs
 #export JAVA_HOME=/usr/lib/jvm/java-6-sun/
-export JAVA_HOME=/usr/lib/jvm/java-6-openjdk/
+export JAVA_HOME=$(/usr/libexec/java_home) # OS X
 #export PLUGIN_HOME=/usr/lib/jvm/java-6-sun/jre/plugin/
 
 export JPDA_ADDRESS=8000
