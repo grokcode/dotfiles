@@ -44,7 +44,7 @@ c = get_config()
 # c.InteractiveShellApp.pylab_import_all = True
 
 # A list of dotted module names of IPython extensions to load.
-# c.InteractiveShellApp.extensions = []
+c.InteractiveShellApp.extensions = ['memory_profiler_ext',]
 
 # Run the module as a script.
 # c.InteractiveShellApp.module_to_run = ''
@@ -143,7 +143,7 @@ c = get_config()
 # c.TerminalIPythonApp.gui = None
 
 # A list of dotted module names of IPython extensions to load.
-# c.TerminalIPythonApp.extensions = []
+c.TerminalIPythonApp.extensions = ['memory_profiler_ext',]
 
 # Start IPython quickly by skipping the loading of config files.
 # c.TerminalIPythonApp.quick = False
