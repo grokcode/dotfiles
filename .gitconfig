@@ -8,3 +8,5 @@
 [alias]
 	co = checkout
 	unstage = reset HEAD --
+[push]
+	default = matching
