@@ -65,7 +65,7 @@ alias dos2unix=fromdos
 alias unix2dos=todos
 alias gs='git status $1'
 alias grep='grep --color=auto $1'
-alias emacs='emacs 2> /dev/null'
+
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
