@@ -24,7 +24,8 @@
              '("elpa" . "http://tromey.com/elpa/"))
 (add-to-list 'package-archives ; user-contributed repository
              '("marmalade" . "http://marmalade-repo.org/packages/"))
-
+(setq package-enable-at-startup nil)
+(package-initialize)
 
 ;; Disable popup dialogs (broken on OS X)
 (defadvice yes-or-no-p (around prevent-dialog activate)
