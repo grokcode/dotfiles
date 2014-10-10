@@ -37,6 +37,10 @@
   (let ((use-dialog-box nil))
     ad-do-it))
 
+;; Auto trim whitespace only on lines I edit
+(require 'ws-trim)
+(global-ws-trim-mode t)
+
 
 ;; dont open the backtrace buffer on error
 ;(setq debug-on-error nil)
