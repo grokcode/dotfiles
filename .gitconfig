@@ -1,7 +1,7 @@
 [user]
 	email = jess@grokcode.com
 [core]
-	editor = emacs
+	editor = ec
 	excludesfile = ~/.gitignore
 [content]
 	editor = emacs
