@@ -4,6 +4,9 @@
 ;; don't show the welcome splash screen
 (setq inhibit-startup-message t)
 
+;; Fix cocoa srgb colors
+(setq ns-use-srgb-colorspace t)
+
 ;; Load custom themes
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 (load-theme 'berkeley t)
