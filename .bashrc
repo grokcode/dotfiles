@@ -59,11 +59,14 @@ export JPDA_TRANSPORT=dt_socket
 
 # Aliases.
 alias mkdir='mkdir -p'
-alias dos2unix=fromdos 
-alias unix2dos=todos
 alias gs='git status $1'
 alias grep='grep --color=auto $1'
 alias pygrep='grep --include \*py --color=auto $1'
+if ! hash dos2unix 2>/dev/null; then
+    alias dos2unix=fromdos
+    alias unix2dos=todos
+fi
+
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
