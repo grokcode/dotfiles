@@ -45,9 +45,6 @@ export PATH=\
 $PATH:\
 .
 
-#export PYTHONPATH=/home/smudge/work/django-practice:\
-#$PYTHONPATH
-
 export CVSROOT=anonymous@amtu.cvs.sourceforge.net:/cvsroot/amtu
 export CVS_RSH=ssh
 export EDITOR=ec
@@ -56,6 +53,11 @@ export JAVA_HOME=$(/usr/libexec/java_home) # OS X
 
 export JPDA_ADDRESS=8000
 export JPDA_TRANSPORT=dt_socket
+
+if [ -d "$HOME/Library/Android" ]; then
+    export ANDROID_HOME="$HOME/Library/Android/sdk"
+    export PATH=$PATH:$HOME/Library/Android/sdk/tools
+fi
 
 # Aliases.
 alias mkdir='mkdir -p'
