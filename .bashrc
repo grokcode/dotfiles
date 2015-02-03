@@ -56,7 +56,7 @@ export JPDA_TRANSPORT=dt_socket
 
 if [ -d "$HOME/Library/Android" ]; then
     export ANDROID_HOME="$HOME/Library/Android/sdk"
-    export PATH=$PATH:$HOME/Library/Android/sdk/tools
+    export PATH=$PATH:$HOME/Library/Android/sdk/tools:$HOME/Library/Android/sdk/platform-tools
 fi
 
 # Aliases.
