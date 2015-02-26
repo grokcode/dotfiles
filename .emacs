@@ -44,10 +44,15 @@
 (require 'ws-trim)
 (global-ws-trim-mode t)
 
+;; Set css and less mode indents to 2 lines
+(add-hook 'css-mode-hook
+          (lambda ()
+            (setq css-indent-offset 2)
+            (setq c-basic-offset 2)
+            (setq indent-tabs-mode nil)))
 
 ;; dont open the backtrace buffer on error
 ;(setq debug-on-error nil)
-
 
 ;; Add hooks for puppet mode
 (autoload 'puppet-mode "puppet-mode" "Major mode for editing puppet manifests")
