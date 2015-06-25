@@ -44,6 +44,10 @@
 (require 'ws-trim)
 (global-ws-trim-mode t)
 
+
+;; Enable flycheck for syntax checking
+(add-hook 'after-init-hook #'global-flycheck-mode)
+
 ;; Set css and less mode indents to 2 lines
 (add-hook 'css-mode-hook
           (lambda ()
