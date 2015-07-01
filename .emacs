@@ -80,6 +80,9 @@
 (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 
+;; Default to spaces when indenting
+(setq-default indent-tabs-mode nil)
+
 
 ;; M-x iwb indents all the things
 (defun iwb ()
