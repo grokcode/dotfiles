@@ -94,4 +94,6 @@ if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
     source /usr/local/bin/virtualenvwrapper.sh
 fi 
 
+# pyenv autocompletion and shims
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
