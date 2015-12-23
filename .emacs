@@ -21,10 +21,12 @@
 	(font . "Inconsolata-16")
 	))
 
-;; Add Marmalade user packages
+;; Add Elpa, Melap, Marmalade user packages
 (require 'package)
 (add-to-list 'package-archives ; original Emacs Lisp Package Archive
-             '("elpa" . "http://tromey.com/elpa/"))
+	     '("elpa" . "http://tromey.com/elpa/"))
+(add-to-list 'package-archives
+	     '("melpa" . "http://melpa.org/packages/"))
 (add-to-list 'package-archives ; user-contributed repository
              '("marmalade" . "http://marmalade-repo.org/packages/"))
 (setq package-enable-at-startup nil)
@@ -67,6 +69,11 @@
 (autoload 'php-mode "php-mode" "Major mode for editing php code." t)
 (add-to-list 'auto-mode-alist '("\\.php$" . php-mode))
 (add-to-list 'auto-mode-alist '("\\.inc$" . php-mode))
+
+
+;; Add hooks for kivy mode
+(autoload 'kivy-mode "kivy-mode" "Major mode for kivy code")
+(add-to-list 'auto-mode-alist '("\\.kv$" . kivy-mode))
 
 
 ;; Add hooks for web mode
