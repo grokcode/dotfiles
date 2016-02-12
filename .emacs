@@ -69,6 +69,10 @@
 (add-to-list 'auto-mode-alist '("\\.inc$" . php-mode))
 
 
+;; Add hooks for ruby mode
+(add-to-list 'auto-mode-alist '("Fastfile" . ruby-mode))
+
+
 ;; Add hooks for web mode
 (autoload 'web-mode "web-mode" "Major mode for editing web templates." t)
 (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
