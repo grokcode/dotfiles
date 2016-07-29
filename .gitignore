@@ -1,6 +1,9 @@
 # Global git ignore file
 # Enable with git config --global core.excludesfile ~/.gitignore
 
+# Pyenv
+.python-version
+
 # Emacs autosaves
 *~
 .#*
