@@ -11,6 +11,9 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 (load-theme 'berkeley t)
 
+;; Turn on soft wrapping at word boundaries
+(global-visual-line-mode t)
+
 ;; Setup the windows to be on the left and full screen vertically,
 ;; also set up some colors and the default font
 (setq default-frame-alist
