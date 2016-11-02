@@ -14,6 +14,9 @@
 ;; Turn on soft wrapping at word boundaries
 (global-visual-line-mode t)
 
+;; Turn on column number display
+(setq column-number-mode t)
+
 ;; Setup the windows to be on the left and full screen vertically,
 ;; also set up some colors and the default font
 (setq default-frame-alist
