@@ -63,6 +63,9 @@
             (setq c-basic-offset 2)
             (setq indent-tabs-mode nil)))
 
+;; Set javascript indents to 2 spaces
+(setq js-indent-level 2)
+
 ;; dont open the backtrace buffer on error
 ;(setq debug-on-error nil)
 
