@@ -56,7 +56,7 @@
 ;; Enable flycheck for syntax checking
 (add-hook 'after-init-hook #'global-flycheck-mode)
 
-;; Set css and less mode indents to 2 lines
+;; Set css and less mode indents to 2 chars
 (add-hook 'css-mode-hook
           (lambda ()
             (setq css-indent-offset 2)
@@ -65,6 +65,12 @@
 
 ;; Set javascript indents to 2 spaces
 (setq js-indent-level 2)
+
+;; Set go mode indents to 4 chars
+(add-hook 'go-mode-hook
+          (lambda ()
+            (setq tab-width 4)
+            (setq indent-tabs-mode nil)))
 
 ;; dont open the backtrace buffer on error
 ;(setq debug-on-error nil)

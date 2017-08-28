@@ -94,3 +94,6 @@ fi
 # pyenv autocompletion and shims
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
+# golang setup
+export GOPATH=$HOME/work/go
+export PATH=$PATH:$GOPATH/bin
