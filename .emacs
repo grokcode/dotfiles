@@ -14,6 +14,10 @@
 ;; Turn on soft wrapping at word boundaries
 (global-visual-line-mode t)
 
+;; Auto fill in text mode (soft wrap at 80 chars)
+(add-hook 'text-mode-hook 'auto-fill-mode)
+(setq-default fill-column 80)
+
 ;; Turn on column number display
 (setq column-number-mode t)
 
