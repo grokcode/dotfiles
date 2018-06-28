@@ -59,6 +59,10 @@ if [ -d "$HOME/Library/Android" ]; then
     export PATH=$PATH:$HOME/Library/Android/sdk/tools:$HOME/Library/Android/sdk/platform-tools
 fi
 
+if [ -d "/usr/local/opt/postgresql@9.6/bin" ]; then
+    export PATH=/usr/local/opt/postgresql@9.6/bin:$PATH
+fi
+
 # Aliases.
 alias mkdir='mkdir -p'
 alias gs='git status $1'
