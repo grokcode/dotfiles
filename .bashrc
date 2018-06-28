@@ -74,9 +74,8 @@ if ! hash dos2unix 2>/dev/null; then
 fi
 
 
-# enable programmable completion features (you don't need to enable
-# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
-# sources /etc/bash.bashrc).
+# enable programmable completion features
+# On a new system, `brew install bash-completion` to enable this
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
