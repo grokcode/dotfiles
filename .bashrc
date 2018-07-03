@@ -63,6 +63,10 @@ if [ -d "/usr/local/opt/postgresql@9.6/bin" ]; then
     export PATH=/usr/local/opt/postgresql@9.6/bin:$PATH
 fi
 
+if [ -d "/usr/local/opt/node@6/bin" ]; then
+    export PATH=$PATH:/usr/local/opt/node@6/bin
+fi
+
 # Aliases.
 alias mkdir='mkdir -p'
 alias gs='git status $1'
