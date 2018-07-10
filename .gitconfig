@@ -1,12 +1,12 @@
 [user]
-	email = jess@grokcode.com
+        email = jess@grokcode.com
 [core]
-	editor = ec
-	excludesfile = ~/.gitignore
+        editor = ec
+        excludesfile = ~/.gitignore
 [content]
-	editor = emacs
+        editor = emacs
 [alias]
-	co = checkout
-	unstage = reset HEAD --
+        co = checkout
+        unstage = reset HEAD --
 [push]
-	default = matching
+        default = matching
