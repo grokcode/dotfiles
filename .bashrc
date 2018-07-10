@@ -47,8 +47,8 @@ $PATH:\
 
 export CVSROOT=anonymous@amtu.cvs.sourceforge.net:/cvsroot/amtu
 export CVS_RSH=ssh
-export EDITOR=ec
-export CVSEDITOR=ec
+export EDITOR=emacs
+export CVSEDITOR=emacs
 export JAVA_HOME=$(/usr/libexec/java_home) # OS X
 
 export JPDA_ADDRESS=8000
