@@ -67,8 +67,8 @@
             (setq c-basic-offset 2)
             (setq indent-tabs-mode nil)))
 
-;; Set javascript indents to 2 spaces
-(setq js-indent-level 2)
+;; Set javascript indents to 4 spaces
+(setq js-indent-level 4)
 
 ;; Set go mode indents to 4 chars
 (add-hook 'go-mode-hook
