@@ -72,7 +72,7 @@ alias mkdir='mkdir -p'
 alias gs='git status $1'
 alias grep='grep --color=auto $1'
 alias pygrep='grep --include \*py --color=auto $1'
-if ! hash dos2unix 2>/dev/null; then
+if ! type dos2unix > /dev/null; then
     alias dos2unix=fromdos
     alias unix2dos=todos
 fi
