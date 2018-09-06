@@ -28,12 +28,14 @@ if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
 
-export PS1="\n\e[32;1m${debian_chroot:+($debian_chroot)}\u@\h \e[33;1m\w\e[0m\n$ "
+# set variable identifying the the ComputerName (`hostname` changes when connected to vpn)
+computer_name=$(scutil --get ComputerName) || $(hostname)
+export PS1="\n\e[32;1m${debian_chroot:+($debian_chroot)}\u@${computer_name} \e[33;1m\w\e[0m\n$ "
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
 xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@${computer_name}: \w\a\]$PS1"
     ;;
 *)
     ;;
