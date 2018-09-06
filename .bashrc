@@ -51,7 +51,7 @@ export CVSROOT=anonymous@amtu.cvs.sourceforge.net:/cvsroot/amtu
 export CVS_RSH=ssh
 export EDITOR=emacs
 export CVSEDITOR=emacs
-export JAVA_HOME=$(/usr/libexec/java_home) # OS X
+export JAVA_HOME=$(/usr/libexec/java_home 2> /dev/null) # OS X
 
 export JPDA_ADDRESS=8000
 export JPDA_TRANSPORT=dt_socket
