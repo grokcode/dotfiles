@@ -114,6 +114,22 @@
 (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 
+
+;; Add hooks for nxml mode. Use hide-show minor mode
+(add-hook 'nxml-mode-hook 'hs-minor-mode)
+; C-c h does expand/collapse in nxml mode
+(add-hook 'nxml-mode-hook
+          (lambda () (local-set-key (kbd "C-c h") 'hs-toggle-hiding)))
+(add-to-list 'hs-special-modes-alist
+             '(nxml-mode
+               "<!--\\|<[^/>]*[^/]>"
+               "-->\\|</[^/>]*[^/]>"
+
+               "<!--"
+               sgml-skip-tag-forward
+               nil))
+
+
 ;; Default to spaces when indenting
 (setq-default indent-tabs-mode nil)
 
