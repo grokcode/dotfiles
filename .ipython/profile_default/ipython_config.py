@@ -46,10 +46,19 @@ c.InteractiveShellApp.exec_lines.append('%autoreload 2')
 # c.InteractiveShellApp.pylab_import_all = True
 
 # A list of dotted module names of IPython extensions to load.
-c.InteractiveShellApp.extensions = [
-    'line_profiler_ext',
-    'memory_profiler_ext',
-    ]
+# Only load the line and memory profilers if they are installed.
+c.InteractiveShellApp.extensions = []
+import imp
+try:
+    imp.find_module('line_profiler')
+    c.InteractiveShellApp.extensions.append('line_profiler_ext')
+except ImportError:
+    print("WARNING: Couldn't load line_profiler")
+try:
+    imp.find_module('memory_profiler')
+    c.InteractiveShellApp.extensions.append('memory_profiler_ext')
+except ImportError:
+        print("WARNING: Couldn't load memory_profiler")
 
 # Run the module as a script.
 # c.InteractiveShellApp.module_to_run = ''
@@ -148,10 +157,7 @@ c.InteractiveShellApp.extensions = [
 # c.TerminalIPythonApp.gui = None
 
 # A list of dotted module names of IPython extensions to load.
-c.TerminalIPythonApp.extensions = [
-    'line_profiler_ext',
-    'memory_profiler_ext',
-    ]
+c.TerminalIPythonApp.extensions = c.InteractiveShellApp.extensions
 
 # Start IPython quickly by skipping the loading of config files.
 # c.TerminalIPythonApp.quick = False
