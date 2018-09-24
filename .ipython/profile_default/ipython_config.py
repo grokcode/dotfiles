@@ -56,7 +56,7 @@ except ImportError:
     print("WARNING: Couldn't load line_profiler")
 try:
     imp.find_module('memory_profiler')
-    c.InteractiveShellApp.extensions.append('memory_profiler_ext')
+    c.InteractiveShellApp.extensions.append('memory_profiler')
 except ImportError:
         print("WARNING: Couldn't load memory_profiler")
 
