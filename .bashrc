@@ -105,6 +105,7 @@ if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
 # golang setup
 export GOPATH=$HOME/work/go
+export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOPATH/bin
 
 export NVM_DIR="$HOME/.nvm"
