@@ -3,6 +3,15 @@
 [core]
         editor = emacs
         excludesfile = ~/.gitignore
+[color]
+        ui = always
+[color "diff"]
+       commit = green
+       meta = yellow
+       frag = cyan
+       old = red
+       new = green
+       whitespace = red reverse
 [content]
         editor = emacs
 [alias]
