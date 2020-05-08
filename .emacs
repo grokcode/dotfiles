@@ -31,6 +31,9 @@
 	(font . "Inconsolata-16")
 	))
 
+;; Initialize elpa backages
+(package-initialize)
+
 ;; Add Elpa, Melap, Marmalade user packages
 (require 'package)
 (add-to-list 'package-archives ; original Emacs Lisp Package Archive
