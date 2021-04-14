@@ -22,3 +22,5 @@
         default = matching
 [credential]
 	helper = osxkeychain
+[pull]
+	ff = only
