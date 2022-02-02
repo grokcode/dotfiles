@@ -107,7 +107,7 @@ if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
 fi 
 
 # pyenv autocompletion and shims
-if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+if which pyenv > /dev/null; then eval "$(pyenv init --path)"; fi
 
 # golang setup
 export GOPATH=$HOME/work/go
