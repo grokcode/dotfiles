@@ -139,10 +139,6 @@ fi
 
 export PROMPT_COMMAND=enter_directory
 
-
-# asdf setup
-source `brew --prefix asdf`/asdf.sh
-
 # Source aliases that don't belong in dotfiles repo
 [ -s ~/.priv.sh ] && \. ~/.priv.sh
 
