@@ -5,6 +5,9 @@
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
+# Don't warn about bash shell
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
 # Set up homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
