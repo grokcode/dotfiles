@@ -75,6 +75,15 @@ if [ -d "/usr/local/opt/node@6/bin" ]; then
     export PATH=$PATH:/usr/local/opt/node@6/bin
 fi
 
+if [ -d `brew --prefix`"/opt/mysql@5.7/bin" ]; then
+    export PATH=$PATH:`brew --prefix`/opt/mysql@5.7/bin
+fi
+
+if [ -d `brew --prefix`"/opt/mysql-client@5.7/bin" ]; then
+    export PATH=$PATH:`brew --prefix`/opt/mysql-client@5.7/bin
+fi
+
+
 # Aliases.
 alias mkdir='mkdir -p'
 alias gs='git status $1'
