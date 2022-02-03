@@ -145,3 +145,13 @@
   (indent-region (point-min) (point-max) nil)
   (untabify (point-min) (point-max)))
 (put 'upcase-region 'disabled nil)
+
+
+;; Replace audible bell with modeline flash
+(defun my-terminal-visible-bell ()
+  "A friendlier visual bell effect."
+  (invert-face 'mode-line)
+  (run-with-timer 0.1 nil 'invert-face 'mode-line))
+
+(setq visible-bell nil
+      ring-bell-function 'my-terminal-visible-bell)
