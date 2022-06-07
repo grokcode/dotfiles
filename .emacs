@@ -17,6 +17,9 @@
 ;; Default wrap at 80 chars
 (setq-default fill-column 80)
 
+;; Don't implicitly split windows vertically
+(setq split-width-threshold nil)
+
 ;; Turn on column number display
 (setq column-number-mode t)
 
