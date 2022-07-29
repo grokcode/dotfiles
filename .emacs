@@ -36,14 +36,12 @@
 ;; Initialize elpa backages
 (package-initialize)
 
-;; Add Elpa, Melap, Marmalade user packages
+;; Add Elpa, Melap user packages
 (require 'package)
 (add-to-list 'package-archives ; original Emacs Lisp Package Archive
 	     '("elpa" . "http://tromey.com/elpa/"))
 (add-to-list 'package-archives
 	     '("melpa" . "http://melpa.org/packages/"))
-(add-to-list 'package-archives ; user-contributed repository
-             '("marmalade" . "http://marmalade-repo.org/packages/"))
 (setq package-enable-at-startup nil)
 (unless package--initialized (package-initialize t))
 
