@@ -136,6 +136,8 @@
 ;; Default to spaces when indenting
 (setq-default indent-tabs-mode nil)
 
+;; Enable downcase-region
+(put 'downcase-region 'disabled nil)
 
 ;; M-x iwb indents all the things
 (defun iwb ()
