@@ -36,7 +36,7 @@
 ;; Initialize elpa backages
 (package-initialize)
 
-;; Add Elpa, Melap user packages
+;; Add Elpa, Melpa user packages
 (require 'package)
 (add-to-list 'package-archives ; original Emacs Lisp Package Archive
 	     '("elpa" . "http://tromey.com/elpa/"))
@@ -105,6 +105,13 @@
 (autoload 'kivy-mode "kivy-mode" "Major mode for kivy code")
 (add-to-list 'auto-mode-alist '("\\.kv$" . kivy-mode))
 
+
+;; Add hooks for lua mode
+(autoload 'lua-mode "lua-mode" "Lua editing mode."
+  (lambda ()
+    (setq lua-indent-level 2)))
+(add-to-list 'auto-mode-alist '("\\.lua$" . lua-mode))
+(add-to-list 'interpreter-mode-alist '("lua" . lua-mode))
 
 ;; Add hooks for web mode
 (autoload 'web-mode "web-mode" "Major mode for editing web templates." t)

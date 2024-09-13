@@ -15,3 +15,7 @@ The following install commands along with the included .bashrc can gracefully ha
 
 1. `brew install --cask emacs`
 1. Run emacs with the `emacs` command
+
+In order to give new emacs windows focus:
+1. `brew install hammerspoon`
+1. `hs` then allow permissions in the hammerspoon gui
