@@ -9,6 +9,13 @@ Getting Started
     ln -s /location/of/the/repo/.bashrc ~/.bashrc
 ```
 
+Terminal
+---
+
+1. In the terminal app, choose `Terminal` -> `Settings`, then click `Profiles`
+2. Import `ios-custom-term.terminal`
+
+
 Emacs on OS X
 ----
 The following install commands along with the included .bashrc can gracefully handle emacs as the git editor and will create and open files if they don't already exist.
