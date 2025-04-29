@@ -88,13 +88,11 @@ fi
 
 
 # enable programmable completion features
-# On a new system, `brew install bash-completion` to enable this
-if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
-    . /etc/bash_completion
+# On a new system, `brew install bash git bash-completion` to enable this
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+      . $(brew --prefix)/etc/bash_completion
 fi
-if type brew > /dev/null && [ -f `brew --prefix`/etc/bash_completion ]; then
-     . `brew --prefix`/etc/bash_completion
-fi
+
 
 # Rbenv shims and autocompletion
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
