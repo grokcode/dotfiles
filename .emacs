@@ -55,10 +55,13 @@
   (let ((use-dialog-box nil))
     ad-do-it))
 
+(add-to-list 'load-path "~/.emacs.d/site-lisp")
+
 ;; Auto trim whitespace only on lines I edit
 (require 'ws-trim)
 (global-ws-trim-mode t)
 
+(require 'flycheck-ruff)
 
 ;; Enable flycheck for syntax checking
 (add-hook 'after-init-hook #'global-flycheck-mode)
